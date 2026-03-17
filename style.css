@@ -1,10 +1,13 @@
 body, html {
     height: 100%;
+    margin: 0;
+    font-family: sans-serif; /* Added a fallback font */
 }
 
-/* The hero image */
+/* --- HERO IMAGE SECTION --- */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (steve.jpeg). This will make the text easier to read */
+  /* This adds a dark tint over the image so text pops. 
+     CHANGE "steve.jpeg" TO YOUR OWN IMAGE FILENAME BELOW */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ryan.jpg");
 
   /* Set a specific height */
@@ -27,43 +30,44 @@ body, html {
   color: white;
 }
 
-  .container-fluid {
+/* --- LAYOUT & SPACING --- */
+.container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
-  }
+}
+
+/* Hover Effect for Portfolio Images */
+.hover {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
 
 .hover:hover .img-responsive {
-  opacity: 0.3;
+    opacity: 0.6; /* Fades image slightly on hover */
 }
 
-.hover:hover .img {
-  opacity: 0.3;
-}
+/* --- COLOR THEMES --- */
 
-.project-img {
-    width: 100%;       /* Make sure it fills its column */
-    height: 300px;     /* Set a fixed height */
-    object-fit: cover; /* This is the magic! It crops the image to fill the space */
-    object-position: center; /* Centers the visible part of the image */
-}
-
+/* Black Background Section (.bg-b) */
 .bg-b {
-  background: #2d2d30;
-  color: #bdbdbd;
+    background: #2d2d30;
+    color: #bdbdbd;
 }
-.bg-w h3 {color: #fff;}
-.bg-w p {color: #fff;}
+.bg-b h3 { color: #fff; }
+.bg-b p { color: #bdbdbd; }
 
-.bg-w= {
-  background: #fff;
-  color: #2d2d30;
+/* White Background Section (.bg-w) */
+/* Fixed the typo here (removed the "=" sign) */
+.bg-w {
+    background: #ffffff;
+    color: #2d2d30;
 }
-.bg-w h3 {color: #2d2d30;}
-.bg-w p {color: #2d2d30;}
+.bg-w h3 { color: #2d2d30; }
+.bg-w p { color: #2d2d30; }
 
-
-
-
-
-
-
+/* Center large images if used outside the grid */
+.center-large-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
